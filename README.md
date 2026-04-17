@@ -26,7 +26,7 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
 
   - **CA1:** Dado que estoy en la pantalla de reservas, cuando ingreso una fecha de inicio y fin, entonces el sistema muestra una lista de las habitaciones disponibles indicando su número, tipo y capacidad.
 
-  - **CA2:** Dado que quiero ingresar un huesped cuando ingreso un documento o huesped que no existe entonces el sistema debe mostrar lo siguiente "Usuario no encontrado. Por favor, verifique el documento" y deshabilitar el botón de "Continuar Reserva" hasta que se seleccione un usuario válido.
+  - **CA2:** Dado que una habitación está ocupada o reservada en las fechas solicitadas, cuando el sistema carga los resultados, entonces esa habitación no debe aparecer en la lista de selección.
 
   - **CA3:** Dado que un grupo necesita más de un cuarto, cuando selecciono varias habitaciones disponibles de la lista, entonces el sistema permite agruparlas para vincularlas a una sola estadía en proceso de creación.
 
