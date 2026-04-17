@@ -68,7 +68,7 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
 # Diagrama De Base De datos
 <img width="1353" height="706" alt="image" src="https://github.com/user-attachments/assets/417e23e3-144e-4db7-9427-908d7b350966" />
 
-#Diagrama de arquitectura
+# Diagrama de arquitectura
 <img width="1920" height="1080" alt="Frontend Backend (3)" src="https://github.com/user-attachments/assets/0ecc34ef-2bc0-4d44-b9db-4a2fd0ef2ba4" />
 
 
