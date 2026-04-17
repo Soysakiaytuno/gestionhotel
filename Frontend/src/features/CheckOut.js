@@ -10,20 +10,16 @@ export class CheckOut {
             <button class="btn btn-danger" id="btn-confirmar-checkout">Procesar Salida</button>
         `;
 
-        // 1. Abrimos el modal de confirmación
         Modal.mostrar(`Check-Out - Reserva #${idEstadia}`, cuerpo, botones);
 
         document.getElementById('btn-cancelar-modal').addEventListener('click', () => Modal.cerrar());
         
-        // 2. Procesamos el cobro
         document.getElementById('btn-confirmar-checkout').addEventListener('click', async () => {
             try {
                 document.getElementById('btn-confirmar-checkout').innerText = "Calculando...";
                 
-                // El backend hace el cálculo matemático y nos devuelve la boleta
                 const resultado = await EstadiaApi.marcarCheckOut(idEstadia);
                 
-                // 3. Mostramos un segundo modal con el resumen del cobro
                 const cuerpoExito = `
                     <div style="text-align: center;">
                         <h3 style="color: var(--success); margin-bottom: 1rem;">¡Check-Out Exitoso!</h3>
@@ -37,7 +33,7 @@ export class CheckOut {
                 
                 document.getElementById('btn-cerrar-exito').addEventListener('click', () => {
                     Modal.cerrar();
-                    onSuccess(); // ¡Recargamos la tabla para que desaparezca la fila!
+                    onSuccess();
                 });
 
             } catch (error) {

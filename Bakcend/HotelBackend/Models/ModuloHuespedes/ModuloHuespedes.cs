@@ -11,8 +11,6 @@ namespace HotelBackend.Models.ModuloUsuarios
         
         [Column("id_usuario")] 
         public int IdUsuario { get; set; }
-
-        // Propiedad de navegación (Entity Framework)
         public virtual Usuario Usuario { get; set; } = null!;
     }
 }

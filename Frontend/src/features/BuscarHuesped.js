@@ -3,7 +3,6 @@ import { HuespedApi } from '../entities/HuespedApi.js';
 export class BuscarHuesped {
     static resultadosTemporales = [];
 
-    // Recibe el estado y una función (callback) para repintar la lista en el widget padre
     static async ejecutar(estado, onHuespedAgregado) {
         const inputBusqueda = document.getElementById('input-dni').value.trim();
         const contenedor = document.getElementById('contenedor-huespedes');
@@ -21,7 +20,7 @@ export class BuscarHuesped {
             if (resultados.length === 0) {
                 contenedor.innerHTML = '<p class="text-center text-danger">Huésped no encontrado.</p>';
                 if (estado.huespedesAgregados.length > 0) {
-                    setTimeout(() => onHuespedAgregado(), 2000); // Vuelve a mostrar los agregados
+                    setTimeout(() => onHuespedAgregado(), 2000); 
                 }
                 return;
             }
@@ -73,6 +72,6 @@ export class BuscarHuesped {
         }
 
         document.getElementById('input-dni').value = ''; 
-        onHuespedAgregado(); // Le avisa al padre que redibuje la lista de seleccionados
+        onHuespedAgregado();
     }
 }

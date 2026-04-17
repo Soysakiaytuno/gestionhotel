@@ -10,22 +10,18 @@ export class CheckIn {
             <button class="btn btn-success" id="btn-confirmar-checkin">Confirmar Ingreso</button>
         `;
 
-        // 1. Abrimos el modal
         Modal.mostrar(`Check-In - Reserva #${idEstadia}`, cuerpo, botones);
 
-        // 2. Evento para cancelar
         document.getElementById('btn-cancelar-modal').addEventListener('click', () => Modal.cerrar());
         
-        // 3. Evento para confirmar enviando al Backend
         document.getElementById('btn-confirmar-checkin').addEventListener('click', async () => {
             try {
-                // Cambiamos el texto del botón mientras carga
                 document.getElementById('btn-confirmar-checkin').innerText = "Procesando...";
                 
                 await EstadiaApi.marcarCheckIn(idEstadia);
                 
                 Modal.cerrar();
-                onSuccess(); // ¡Recargamos la tabla!
+                onSuccess();
             } catch (error) {
                 alert("Error: " + error.message);
                 Modal.cerrar();

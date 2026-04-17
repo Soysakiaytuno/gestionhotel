@@ -54,7 +54,7 @@ export class TablaDashboard {
         contenedor.innerHTML = html;
 
         // ==========================================
-        // VINCULACIÓN DE EVENTOS (NUEVO)
+        // VINCULACIÓN DE EVENTOS
         // ==========================================
         
         // Escuchamos los clics en todos los botones verdes
@@ -62,7 +62,6 @@ export class TablaDashboard {
             btn.addEventListener('click', (e) => {
                 const id = e.target.getAttribute('data-id');
                 const titular = e.target.getAttribute('data-titular');
-                // Llamamos al Feature y le pasamos "this.renderizar()" para que se recargue la tabla al terminar
                 CheckIn.ejecutar(id, titular, () => this.renderizar()); 
             });
         });

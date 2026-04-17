@@ -12,8 +12,6 @@ namespace HotelBackend.Models.ModuloEstadias
         public string Estado { get; private set; } = null!;
         public int? DiasCobrados { get; private set; }
         public decimal? MontoTotal { get; private set; }
-
-        // Constructor privado para obligar el uso de los Factory Methods
         private Estadia(int id, DateTime ing, DateTime sal, DateTime? inReal, DateTime? outReal, string est, int? dias, decimal? monto)
         {
             IdEstadia = id; 
@@ -26,13 +24,11 @@ namespace HotelBackend.Models.ModuloEstadias
             MontoTotal = monto;
         }
 
-        // Factory para CREAR una nueva reserva
         public static Estadia CrearNuevaReserva(DateTime ingreso, DateTime salida)
         {
             return new Estadia(0, ingreso, salida, null, null, "Programada", null, null);
         }
 
-        // Factory para RECONSTRUIR desde la base de datos
         public static Estadia CargarDesdeBd(int id, DateTime ing, DateTime sal, DateTime? inReal, DateTime? outReal, string est, int? dias, decimal? monto)
         {
             return new Estadia(id, ing, sal, inReal, outReal, est, dias, monto);

@@ -2,10 +2,8 @@ import { BuscarHabitaciones } from '../features/BuscarHabitaciones.js';
 import { BuscarHuesped } from '../features/BuscarHuesped.js';
 import { GuardarReserva } from '../features/GuardarReserva.js';
 
-// Ahora el Widget solo coordina el Estado y pinta la selección final
 export class FormularioReserva {
     
-    // Estado global de la reserva en curso
     static estado = {
         ingreso: null,
         salida: null,
@@ -15,7 +13,6 @@ export class FormularioReserva {
     };
 
     static iniciar() {
-        // Conectamos los botones a sus respectivas "Features", pasándoles el estado
         document.getElementById('btn-buscar-habs').addEventListener('click', () => {
             BuscarHabitaciones.ejecutar(this.estado);
         });
@@ -29,7 +26,6 @@ export class FormularioReserva {
         });
     }
 
-    // Única lógica visual que conservamos: Pintar a los huéspedes ya seleccionados
     static renderizarHuespedes() {
         const contenedor = document.getElementById('contenedor-huespedes');
         
@@ -59,7 +55,6 @@ export class FormularioReserva {
         });
         contenedor.innerHTML = html;
 
-        // Escuchamos el cambio de titular
         document.querySelectorAll('.radio-titular').forEach(radio => {
             radio.addEventListener('change', (e) => {
                 this.estado.idHuespedTitular = parseInt(e.target.value);

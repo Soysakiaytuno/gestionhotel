@@ -17,15 +17,8 @@ namespace HotelBackend.Controllers
             _repositorioHabitacion = repositorioHabitacion;
         }
 
-        // ==========================================
-        // DTOs (Data Transfer Objects)
-        // ==========================================
         public record RespuestaHabitacionDisponible(int IdHabitacion, string Numero, string Tipo, int Capacidad, decimal PrecioNoche);
 
-        // ==========================================
-        // RF01: Consulta de Disponibilidad
-        // GET: api/habitaciones/disponibles?ingreso=2023-10-01&salida=2023-10-05
-        // ==========================================
         [HttpGet("disponibles")]
         public async Task<IActionResult> ObtenerDisponibles([FromQuery] DateTime ingreso, [FromQuery] DateTime salida)
         {
@@ -36,7 +29,6 @@ namespace HotelBackend.Controllers
 
             var habitaciones = await _repositorioHabitacion.ObtenerDisponiblesAsync(ingreso, salida);
 
-            // Mapeamos las entidades de la base de datos a un JSON limpio para el Frontend
             var respuesta = habitaciones.Select(h => new RespuestaHabitacionDisponible(
                 h.IdHabitacion,
                 h.NumeroHabitacion,

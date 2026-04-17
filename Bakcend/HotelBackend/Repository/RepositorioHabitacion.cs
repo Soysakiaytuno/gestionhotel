@@ -11,7 +11,6 @@ namespace HotelBackend.Repository
     {
         private readonly string _cadenaConexion;
 
-        // Ahora inyectamos la configuración directa para leer el appsettings.json
         public RepositorioHabitacion(IConfiguration configuracion)
         {
             _cadenaConexion = configuracion.GetConnectionString("DefaultConnection")!;
@@ -21,7 +20,6 @@ namespace HotelBackend.Repository
         {
             var disponibles = new List<Habitacion>();
 
-            // ¡Consulta SQL 100% pura y transparente!
             string sql = @"
                 SELECT h.id_habitacion, h.numero_habitacion, h.id_estado,
                        t.id_tipo_habitacion, t.nombre AS tipo_nombre, t.capacidad_maxima, t.precio_base_noche
@@ -37,12 +35,10 @@ namespace HotelBackend.Repository
                       AND e.fecha_salida_programada > @FechaIngreso
                 )";
 
-            // Abrimos el "tubo" directo a SQL Server
             using (SqlConnection conexion = new SqlConnection(_cadenaConexion))
             {
                 using (SqlCommand comando = new SqlCommand(sql, conexion))
                 {
-                    // Pasamos los parámetros de forma segura para evitar inyecciones SQL
                     comando.Parameters.AddWithValue("@FechaIngreso", fechaIngreso);
                     comando.Parameters.AddWithValue("@FechaSalida", fechaSalida);
 

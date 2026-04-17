@@ -14,8 +14,6 @@ namespace HotelBackend.Models.ModuloEstadias
         
         [Column("es_titular")] 
         public bool EsTitular { get; set; }
-
-        // Navegación
         public virtual Estadia Estadia { get; set; } = null!;
         public virtual Huesped Huesped { get; set; } = null!;
     }

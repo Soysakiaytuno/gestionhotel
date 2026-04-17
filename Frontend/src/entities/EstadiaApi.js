@@ -12,7 +12,6 @@ export class EstadiaApi {
         }
     }
 
-    // NUEVO MÉTODO: Envía el paquete completo de datos (Fechas, IDs Habs, IDs Huéspedes) (RF03)
     static async crearReserva(peticionDatos) {
         const respuesta = await fetch(`${CONFIG.API_URL}/estadias`, {
             method: 'POST',
@@ -49,6 +48,6 @@ export class EstadiaApi {
             const error = await respuesta.json();
             throw new Error(error.error || 'Error desconocido');
         }
-        return await respuesta.json(); // Traerá los días y el monto total
+        return await respuesta.json();
     }
 }

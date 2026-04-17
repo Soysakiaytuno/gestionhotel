@@ -2,7 +2,6 @@ import { HabitacionApi } from '../entities/HabitacionApi.js';
 import { formatters } from '../shared/utils/formatters.js';
 
 export class BuscarHabitaciones {
-    // Recibe el 'estado' global del formulario para modificarlo directamente
     static async ejecutar(estado) {
         const inputIngreso = document.getElementById('input-ingreso').value;
         const inputSalida = document.getElementById('input-salida').value;
@@ -13,7 +12,6 @@ export class BuscarHabitaciones {
             return;
         }
 
-        // Actualizamos el estado del widget padre
         estado.ingreso = inputIngreso;
         estado.salida = inputSalida;
         estado.idsHabitacionesSeleccionadas = [];

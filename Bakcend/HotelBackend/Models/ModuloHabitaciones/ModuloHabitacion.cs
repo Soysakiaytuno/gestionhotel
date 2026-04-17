@@ -20,8 +20,6 @@ namespace HotelBackend.Models.ModuloHabitaciones
         
         [Column("numero_habitacion")] 
         public string NumeroHabitacion { get; set; } = null!;
-
-        // Propiedad de navegación para poder traer el precio
         public virtual TipoHabitacion TipoHabitacion { get; set; } = null!;
     }
 }
