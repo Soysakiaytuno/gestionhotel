@@ -26,7 +26,7 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
 
   - **CA1:** Dado que estoy en la pantalla de reservas, cuando ingreso una fecha de inicio y fin, entonces el sistema muestra una lista de las habitaciones disponibles indicando su número, tipo y capacidad.
 
-  - **CA2:** Dado que quiero ingresar un huesped cuando ingreso un documento o huesped que no existe entonces el sistema debe mostrar lo siguiente "Usuario no encontrado. Por favor, verifique el documento" y deshabilitar el botón de "Continuar Reserva" hasta que se seleccione un usuario válido.
+  - **CA2:** Dado que una habitación está ocupada o reservada en las fechas solicitadas, cuando el sistema carga los resultados, entonces esa habitación no debe aparecer en la lista de selección.
 
   - **CA3:** Dado que un grupo necesita más de un cuarto, cuando selecciono varias habitaciones disponibles de la lista, entonces el sistema permite agruparlas para vincularlas a una sola estadía en proceso de creación.
 
@@ -47,7 +47,7 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
 
 * **RF04:** Panel de Recepción (Dashboard): Como recepcionista, quiero visualizar un panel general de estadías, para identificar rápidamente los check-ins y check-outs del día.
 
-  - **CA1:** Dado que ingreso al sistema, cuando visualizo el panel principal, entonces veo una lista de las estadías activas ordenadas por su estado (Programada, En Curso, Finalizada).
+  - **CA1:** Dado que ingreso al sistema, cuando visualizo el panel principal, entonces veo una lista de las estadías Programadas y en estado En Curso.
 
   - **CA2:** Dado que ubico una estadía en el listado, cuando esta se encuentra "Programada" o "En Curso", entonces el sistema me muestra los botones para accionar el Check-in o Check-out correspondientemente.
 
@@ -56,7 +56,7 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
 
   - **CA1:** Dado que tengo una estadía en estado "Programada", cuando ejecuto la acción de Check-In, entonces el estado cambia a "En Curso" y el sistema registra automáticamente la fecha y hora actual como inicio real.
 
-  - **CA2:** Dado que una estadía ya se encuentra "En Curso" o "Finalizada", cuando intento realizar la acción de Check-In, entonces el sistema no me muestra la opción o lanza un error.
+  - **CA2:** Dado que una estadía ya se encuentra "En Curso" o "Finalizada", cuando intento realizar la acción de Check-In, entonces el sistema no me muestra la opción.
 
 
 * **RF06:** Ejecución de Check-Out y Cálculo de Cobro: Como recepcionista, quiero registrar el check-out de una estadía, para liberar las habitaciones y calcular automáticamente el monto a pagar.
@@ -64,3 +64,13 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
   - **CA1:** Dado que una estadía está "En Curso", cuando ejecuto la acción de Check-Out, entonces el estado cambia a "Finalizada" y se registra la fecha y hora actual como salida real.
 
   - **CA2:** Dado que confirmo el Check-Out, cuando el sistema guarda el registro, entonces calcula automáticamente la cantidad del cobro que se va a realizar
+
+# 3. Diagrama De Base De datos
+<img width="1353" height="706" alt="image" src="https://github.com/user-attachments/assets/417e23e3-144e-4db7-9427-908d7b350966" />
+
+# 4. Diagrama de arquitectura
+<img width="1920" height="1080" alt="Frontend Backend (3)" src="https://github.com/user-attachments/assets/0ecc34ef-2bc0-4d44-b9db-4a2fd0ef2ba4" />
+
+# 5. Video
+https://drive.google.com/file/d/1J4X4veZyHW_F2vtPD1ktnEMwdD_0hURu/view?usp=sharing
+
