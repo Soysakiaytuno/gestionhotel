@@ -47,7 +47,7 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
 
 * **RF04:** Panel de Recepción (Dashboard): Como recepcionista, quiero visualizar un panel general de estadías, para identificar rápidamente los check-ins y check-outs del día.
 
-  - **CA1:** Dado que ingreso al sistema, cuando visualizo el panel principal, entonces veo una lista de las estadías activas ordenadas por su estado (Programada, En Curso, Finalizada).
+  - **CA1:** Dado que ingreso al sistema, cuando visualizo el panel principal, entonces veo una lista de las estadías Programadas y en estado En Curso.
 
   - **CA2:** Dado que ubico una estadía en el listado, cuando esta se encuentra "Programada" o "En Curso", entonces el sistema me muestra los botones para accionar el Check-in o Check-out correspondientemente.
 
