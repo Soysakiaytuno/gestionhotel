@@ -56,7 +56,7 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
 
   - **CA1:** Dado que tengo una estadía en estado "Programada", cuando ejecuto la acción de Check-In, entonces el estado cambia a "En Curso" y el sistema registra automáticamente la fecha y hora actual como inicio real.
 
-  - **CA2:** Dado que una estadía ya se encuentra "En Curso" o "Finalizada", cuando intento realizar la acción de Check-In, entonces el sistema no me muestra la opción o lanza un error.
+  - **CA2:** Dado que una estadía ya se encuentra "En Curso" o "Finalizada", cuando intento realizar la acción de Check-In, entonces el sistema no me muestra la opción.
 
 
 * **RF06:** Ejecución de Check-Out y Cálculo de Cobro: Como recepcionista, quiero registrar el check-out de una estadía, para liberar las habitaciones y calcular automáticamente el monto a pagar.
