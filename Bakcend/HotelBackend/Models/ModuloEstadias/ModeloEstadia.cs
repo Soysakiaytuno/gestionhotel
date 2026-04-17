@@ -13,20 +13,29 @@ namespace HotelBackend.Models.ModuloEstadias
         public int? DiasCobrados { get; private set; }
         public decimal? MontoTotal { get; private set; }
 
-        // Constructor para CREAR una nueva reserva desde cero
-        public Estadia(DateTime ingreso, DateTime salida)
+        // Constructor privado para obligar el uso de los Factory Methods
+        private Estadia(int id, DateTime ing, DateTime sal, DateTime? inReal, DateTime? outReal, string est, int? dias, decimal? monto)
         {
-            FechaIngresoProgramada = ingreso;
-            FechaSalidaProgramada = salida;
-            Estado = "Programada";
+            IdEstadia = id; 
+            FechaIngresoProgramada = ing; 
+            FechaSalidaProgramada = sal;
+            FechaCheckInReal = inReal; 
+            FechaCheckOutReal = outReal; 
+            Estado = est;
+            DiasCobrados = dias; 
+            MontoTotal = monto;
         }
 
-        // Constructor para RECONSTRUIR el objeto cuando lo leemos de la Base de Datos
-        public Estadia(int id, DateTime ing, DateTime sal, DateTime? inReal, DateTime? outReal, string est, int? dias, decimal? monto)
+        // Factory para CREAR una nueva reserva
+        public static Estadia CrearNuevaReserva(DateTime ingreso, DateTime salida)
         {
-            IdEstadia = id; FechaIngresoProgramada = ing; FechaSalidaProgramada = sal;
-            FechaCheckInReal = inReal; FechaCheckOutReal = outReal; Estado = est;
-            DiasCobrados = dias; MontoTotal = monto;
+            return new Estadia(0, ingreso, salida, null, null, "Programada", null, null);
+        }
+
+        // Factory para RECONSTRUIR desde la base de datos
+        public static Estadia CargarDesdeBd(int id, DateTime ing, DateTime sal, DateTime? inReal, DateTime? outReal, string est, int? dias, decimal? monto)
+        {
+            return new Estadia(id, ing, sal, inReal, outReal, est, dias, monto);
         }
 
         public void MarcarCheckIn()
@@ -36,12 +45,10 @@ namespace HotelBackend.Models.ModuloEstadias
             Estado = "En Curso";
         }
 
-        // Ahora recibe el precio por noche como parámetro, ya no depende de buscar en otras tablas
         public void MarcarCheckOut(decimal precioTotalPorNoche)
         {
             if (Estado != "En Curso") throw new Exception("El huésped debe haber hecho Check-In primero.");
-            
-            if (!FechaCheckInReal.HasValue) throw new Exception("No existe una fecha de Check-In válida para procesar.");
+            if (!FechaCheckInReal.HasValue) throw new Exception("No existe una fecha de Check-In válida.");
 
             FechaCheckOutReal = DateTime.Now;
             Estado = "Finalizada";

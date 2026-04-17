@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel System - Dashboard</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo">🏨 Gestión Hotelera</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Panel Principal</a>
+            <a href="nueva-reserva.html" class="btn btn-primary">Nueva Reserva</a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        <header class="page-header">
+            <h1>Recepciones del Día</h1>
+            <p>Control de Check-in y Check-out de estadías activas.</p>
+        </header>
+
+        <!-- Aquí el Widget inyectará la tabla -->
+        <section id="contenedor-tabla">
+            <p class="loading-text">Cargando estadías...</p>
+        </section>
+    </main>
+
+    <!-- Contenedor base para nuestro Modal (Oculto por defecto) -->
+    <div id="modal-root" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2 id="modal-titulo">Título</h2>
+                <button id="modal-btn-cerrar" class="btn-close">&times;</button>
+            </div>
+            <div id="modal-cuerpo" class="modal-body">
+                <!-- Contenido dinámico -->
+            </div>
+            <div id="modal-footer" class="modal-footer">
+                <!-- Botones dinámicos -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PUNTO DE ENTRADA (Capa Pages) -->
+    <!-- Nota: Aún no hemos creado este archivo, pero lo dejamos preparado -->
+    <script type="module" src="./src/pages/dashboard.js"></script>
+</body>
+</html>

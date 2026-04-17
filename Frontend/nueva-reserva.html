@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel System - Nueva Reserva</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🏨 Gestión Hotelera</div>
+        <div class="nav-links">
+            <a href="index.html">Panel Principal</a>
+            <a href="nueva-reserva.html" class="active btn btn-primary">Nueva Reserva</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>Crear Nueva Reserva</h1>
+            <p>Sigue los pasos para registrar una nueva estadía.</p>
+        </header>
+
+        <div class="form-grid">
+            <!-- BLOQUE 1: Fechas y Habitaciones (RF01) -->
+            <section class="card">
+                <h2>1. Fechas y Habitaciones</h2>
+                <div class="form-group row">
+                    <div>
+                        <label>Fecha de Ingreso</label>
+                        <input type="date" id="input-ingreso" class="form-control">
+                    </div>
+                    <div>
+                        <label>Fecha de Salida</label>
+                        <input type="date" id="input-salida" class="form-control">
+                    </div>
+                </div>
+                <button id="btn-buscar-habs" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Buscar Disponibilidad</button>
+                
+                <!-- Aquí inyectaremos las habitaciones libres -->
+                <div id="contenedor-habitaciones" class="resultados-caja">
+                    <p class="text-muted text-center">Ingresa las fechas para ver las habitaciones disponibles.</p>
+                </div>
+            </section>
+
+            <!-- BLOQUE 2: Huéspedes (RF02) -->
+            <section class="card">
+                <h2>2. Búsqueda de Huéspedes</h2>
+                <div class="form-group row">
+                    <div style="flex-grow: 1;">
+                        <label>Buscar Huésped (DNI, Nombre o Apellido)</label>
+                        <input type="text" id="input-dni" class="form-control" placeholder="Ej: 8923451 o Ana Gomez">
+                    </div>
+                    <div style="display: flex; align-items: flex-end;">
+                        <button id="btn-buscar-huesped" class="btn btn-outline">Buscar</button>
+                    </div>
+                </div>
+
+                <!-- Aquí inyectaremos los huéspedes agregados a la reserva -->
+                <div id="contenedor-huespedes" class="resultados-caja">
+                    <p class="text-muted text-center">Aún no hay huéspedes agregados.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- BLOQUE 3: Confirmación (RF03) -->
+        <section class="card mt-2 text-center" style="background-color: #f8fafc;">
+            <h2>3. Confirmar Estadía</h2>
+            <p class="text-muted" style="margin-bottom: 1rem;">Verifica que hayas seleccionado habitaciones y un huésped titular.</p>
+            <button id="btn-guardar-reserva" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 3rem;">Registrar Estadía</button>
+        </section>
+    </main>
+
+    <!-- Punto de Entrada (Capa Pages) -->
+    <script type="module" src="./src/pages/nueva-reserva.js"></script>
+</body>
+</html>
