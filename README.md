@@ -72,5 +72,5 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
 <img width="1920" height="1080" alt="Frontend Backend (3)" src="https://github.com/user-attachments/assets/0ecc34ef-2bc0-4d44-b9db-4a2fd0ef2ba4" />
 
 # 5. Video
-https://drive.google.com/file/d/1J4X4veZyHW_F2vtPD1ktnEMwdD_0hURu/view?usp=sharing
+https://drive.google.com/file/d/1wuRdBOq6TnkyVYAH46Hfz3Z0CtAEPpcp/view?usp=sharing
 
