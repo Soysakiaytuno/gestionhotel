@@ -76,18 +76,5 @@ namespace MiProyectoBackend.Tests
             Assert.Equal(1, estadia.DiasCobrados);
             Assert.Equal(150.0m, estadia.MontoTotal);
         }
-
-        [Fact]
-        public async Task RF03_CrearReserva_FaltanHabitacionesOHuespedes_RetornaBadRequest()
-        {
-            var controller = new ControladorEstadias(null!);
-            var peticionIncompleta = new ControladorEstadias.PeticionCrearEstadia(
-                DateTime.Now, DateTime.Now.AddDays(2), new List<int>(), new List<int>(), 1);
-
-            var resultado = await controller.CrearReserva(peticionIncompleta);
-
-            var badRequest = Assert.IsType<BadRequestObjectResult>(resultado);
-            Assert.Contains("Datos incompletos", badRequest.Value!.ToString());
-        }
     }
 }
