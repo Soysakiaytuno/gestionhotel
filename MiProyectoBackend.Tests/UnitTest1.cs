@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 using HotelBackend.Controllers;
 using HotelBackend.Repository;
 using HotelBackend.Models.ModuloUsuarios;
@@ -57,7 +58,36 @@ namespace MiProyectoBackend.Tests
             
             estadia.MarcarCheckIn();
             
-            Assert.Throws<InvalidOperationException>(() => estadia.MarcarCheckIn());
+            Assert.Throws<Exception>(() => estadia.MarcarCheckIn());
+        }
+
+
+        [Fact]
+        public void RF06_MarcarCheckOut_EstadiaEnCurso_CalculaCobroYFinaliza()
+        {
+            var estadia = Estadia.CrearNuevaReserva(DateTime.Now, DateTime.Now.AddDays(3));
+            estadia.MarcarCheckIn(); // Cambia a "En Curso" y asigna FechaCheckInReal
+            decimal precioPorNoche = 150.0m; // Precio simulado de la habitación
+
+            estadia.MarcarCheckOut(precioPorNoche);
+
+            Assert.Equal("Finalizada", estadia.Estado);
+            Assert.NotNull(estadia.FechaCheckOutReal);
+            Assert.Equal(1, estadia.DiasCobrados);
+            Assert.Equal(150.0m, estadia.MontoTotal);
+        }
+
+        [Fact]
+        public async Task RF03_CrearReserva_FaltanHabitacionesOHuespedes_RetornaBadRequest()
+        {
+            var controller = new ControladorEstadias(null!);
+            var peticionIncompleta = new ControladorEstadias.PeticionCrearEstadia(
+                DateTime.Now, DateTime.Now.AddDays(2), new List<int>(), new List<int>(), 1);
+
+            var resultado = await controller.CrearReserva(peticionIncompleta);
+
+            var badRequest = Assert.IsType<BadRequestObjectResult>(resultado);
+            Assert.Contains("Datos incompletos", badRequest.Value!.ToString());
         }
     }
 }

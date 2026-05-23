@@ -18,7 +18,7 @@ namespace HotelBackend.Repository
             _cadenaConexion = configuracion.GetConnectionString("DefaultConnection")!;
         }
 
-        public async Task<List<EstadiaDashboardDto>> ObtenerActivasAsync()
+         public virtual async Task<List<EstadiaDashboardDto>> ObtenerActivasAsync()
         {
             var lista = new List<EstadiaDashboardDto>();
             string sql = @"
