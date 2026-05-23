@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<coverage line-rate="0.07948717948717948" branch-rate="0.02109704641350211" complexity="514" version="1.9" timestamp="1779522971" lines-covered="93" lines-valid="1170" branches-covered="10" branches-valid="474">
+<coverage line-rate="0.06902502157031924" branch-rate="0.016877637130801686" complexity="511" version="1.9" timestamp="1779546319" lines-covered="80" lines-valid="1159" branches-covered="8" branches-valid="474">
   <packages>
-    <package line-rate="0.10478359908883828" branch-rate="0" complexity="217" name="MiProyectoBackend.Tests">
+    <package line-rate="0.08433734939759036" branch-rate="0" complexity="214" name="MiProyectoBackend.Tests">
       <classes>
         <class line-rate="0" branch-rate="1" complexity="1" name="Microsoft.AspNetCore.OpenApi.Generated.&lt;OpenApiXmlCommentSupport_generated&gt;F6146E3D524EAFD584A4990C1841A2D3034A968B9FD035E624673A5F2696E0369__XmlComment" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\obj\Debug\net10.0\Microsoft.AspNetCore.OpenApi.SourceGenerators\Microsoft.AspNetCore.OpenApi.SourceGenerators.XmlCommentGenerator\OpenApiXmlCommentSupport.generated.cs">
           <methods>
@@ -1594,7 +1594,19 @@
                 <line number="75" hits="1" branch="False" />
                 <line number="76" hits="1" branch="False" />
                 <line number="77" hits="1" branch="False" />
-                <line number="78" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method line-rate="1" branch-rate="1" complexity="1" name="RF06_MarcarCheckOut_CalculaCobroYFinaliza" signature="()">
+              <lines>
+                <line number="80" hits="1" branch="False" />
+                <line number="81" hits="1" branch="False" />
+                <line number="82" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+                <line number="84" hits="1" branch="False" />
+                <line number="85" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
+                <line number="87" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
@@ -1618,7 +1630,15 @@
             <line number="75" hits="1" branch="False" />
             <line number="76" hits="1" branch="False" />
             <line number="77" hits="1" branch="False" />
-            <line number="78" hits="1" branch="False" />
+            <line number="80" hits="1" branch="False" />
+            <line number="81" hits="1" branch="False" />
+            <line number="82" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+            <line number="84" hits="1" branch="False" />
+            <line number="85" hits="1" branch="False" />
+            <line number="86" hits="1" branch="False" />
+            <line number="87" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
           </lines>
         </class>
         <class line-rate="0" branch-rate="1" complexity="1" name="Microsoft.AspNetCore.OpenApi.Generated.&lt;OpenApiXmlCommentSupport_generated&gt;F6146E3D524EAFD584A4990C1841A2D3034A968B9FD035E624673A5F2696E0369__XmlCommentOperationTransformer.&lt;&gt;c__DisplayClass0_0" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\obj\Debug\net10.0\Microsoft.AspNetCore.OpenApi.SourceGenerators\Microsoft.AspNetCore.OpenApi.SourceGenerators.XmlCommentGenerator\OpenApiXmlCommentSupport.generated.cs">
@@ -1663,7 +1683,7 @@
             <line number="435" hits="0" branch="False" />
           </lines>
         </class>
-        <class line-rate="1" branch-rate="1" complexity="1" name="MiProyectoBackend.Tests.UserStoriesTests.&lt;&gt;c__DisplayClass3_0" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\UnitTest1.cs">
+        <class line-rate="1" branch-rate="1" complexity="1" name="MiProyectoBackend.Tests.UserStoriesTests.&lt;&gt;c__DisplayClass2_0" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\UnitTest1.cs">
           <methods>
             <method line-rate="1" branch-rate="1" complexity="1" name="&lt;RF05_MarcarCheckIn_EstadiaYaEnCurso_DebeLanzarExcepcion&gt;b__0" signature="()">
               <lines>
@@ -1673,34 +1693,6 @@
           </methods>
           <lines>
             <line number="61" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class line-rate="0.4444444444444444" branch-rate="1" complexity="1" name="MiProyectoBackend.Tests.UserStoriesTests.&lt;RF02_BuscarHuesped_ConTerminoInexistente_RetornaNotFound&gt;d__1" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\UnitTest1.cs">
-          <methods>
-            <method line-rate="0.4444444444444444" branch-rate="1" complexity="1" name="MoveNext" signature="()">
-              <lines>
-                <line number="30" hits="1" branch="False" />
-                <line number="31" hits="1" branch="False" />
-                <line number="33" hits="1" branch="False" />
-                <line number="34" hits="1" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="30" hits="1" branch="False" />
-            <line number="31" hits="1" branch="False" />
-            <line number="33" hits="1" branch="False" />
-            <line number="34" hits="1" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
           </lines>
         </class>
         <class line-rate="1" branch-rate="1" complexity="1" name="MiProyectoBackend.Tests.UserStoriesTests.&lt;RF02_BuscarHuesped_ConTerminoVacio_RetornaBadRequest&gt;d__0" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\UnitTest1.cs">
@@ -1725,75 +1717,9 @@
             <line number="26" hits="1" branch="False" />
           </lines>
         </class>
-        <class line-rate="1" branch-rate="1" complexity="1" name="MiProyectoBackend.Tests.UserStoriesTests.&lt;RF03_CrearReserva_FaltanHabitacionesOHuespedes_RetornaBadRequest&gt;d__5" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\UnitTest1.cs">
-          <methods>
-            <method line-rate="1" branch-rate="1" complexity="1" name="MoveNext" signature="()">
-              <lines>
-                <line number="86" hits="1" branch="False" />
-                <line number="88" hits="1" branch="False" />
-                <line number="89" hits="1" branch="False" />
-                <line number="90" hits="1" branch="False" />
-                <line number="93" hits="1" branch="False" />
-                <line number="96" hits="1" branch="False" />
-                <line number="97" hits="1" branch="False" />
-                <line number="98" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="86" hits="1" branch="False" />
-            <line number="88" hits="1" branch="False" />
-            <line number="89" hits="1" branch="False" />
-            <line number="90" hits="1" branch="False" />
-            <line number="93" hits="1" branch="False" />
-            <line number="96" hits="1" branch="False" />
-            <line number="97" hits="1" branch="False" />
-            <line number="98" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class line-rate="0.4666666666666667" branch-rate="1" complexity="1" name="MiProyectoBackend.Tests.UserStoriesTests.&lt;RF06_MarcarCheckOut_EstadiaValida_CalculaTotalYActualizaBd&gt;d__6" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\UnitTest1.cs">
-          <methods>
-            <method line-rate="0.4666666666666667" branch-rate="1" complexity="1" name="MoveNext" signature="()">
-              <lines>
-                <line number="102" hits="1" branch="False" />
-                <line number="104" hits="1" branch="False" />
-                <line number="105" hits="1" branch="False" />
-                <line number="106" hits="1" branch="False" />
-                <line number="108" hits="1" branch="False" />
-                <line number="109" hits="1" branch="False" />
-                <line number="112" hits="1" branch="False" />
-                <line number="113" hits="0" branch="False" />
-                <line number="115" hits="0" branch="False" />
-                <line number="118" hits="0" branch="False" />
-                <line number="121" hits="0" branch="False" />
-                <line number="122" hits="0" branch="False" />
-                <line number="124" hits="0" branch="False" />
-                <line number="125" hits="0" branch="False" />
-                <line number="126" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="102" hits="1" branch="False" />
-            <line number="104" hits="1" branch="False" />
-            <line number="105" hits="1" branch="False" />
-            <line number="106" hits="1" branch="False" />
-            <line number="108" hits="1" branch="False" />
-            <line number="109" hits="1" branch="False" />
-            <line number="112" hits="1" branch="False" />
-            <line number="113" hits="0" branch="False" />
-            <line number="115" hits="0" branch="False" />
-            <line number="118" hits="0" branch="False" />
-            <line number="121" hits="0" branch="False" />
-            <line number="122" hits="0" branch="False" />
-            <line number="124" hits="0" branch="False" />
-            <line number="125" hits="0" branch="False" />
-            <line number="126" hits="0" branch="False" />
-          </lines>
-        </class>
       </classes>
     </package>
-    <package line-rate="0.06429548563611491" branch-rate="0.037037037037037035" complexity="297" name="HotelBackend">
+    <package line-rate="0.06048387096774194" branch-rate="0.02962962962962963" complexity="297" name="HotelBackend">
       <classes>
         <class line-rate="0" branch-rate="0" complexity="4" name="Program" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Program.cs">
           <methods>
@@ -3537,7 +3463,53 @@
             <line number="23" hits="0" branch="False" />
           </lines>
         </class>
-        <class line-rate="0.90625" branch-rate="0.5833333333333334" complexity="12" name="HotelBackend.Models.ModuloEstadias.Estadia" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Models\ModuloEstadias\ModeloEstadia.cs">
+        <class line-rate="0.7777777777777778" branch-rate="0.5" complexity="6" name="HotelBackend.Models.ModuloEstadias.Cobro" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Models\ModuloEstadias\Cobro.cs">
+          <methods>
+            <method line-rate="0.7777777777777778" branch-rate="0.5" complexity="6" name="calcularCobro" signature="(HotelBackend.Models.ModuloEstadias.Estadia, decimal)">
+              <lines>
+                <line number="6" hits="1" branch="False" />
+                <line number="7" hits="1" branch="True" condition-coverage="50% (2/4)">
+                  <conditions>
+                    <condition number="0" type="jump" coverage="50%" />
+                    <condition number="1" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="8" hits="0" branch="False" />
+                <line number="9" hits="0" branch="False" />
+                <line number="11" hits="1" branch="False" />
+                <line number="12" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="0" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="13" hits="1" branch="False" />
+                <line number="14" hits="1" branch="False" />
+                <line number="15" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="1" branch="False" />
+            <line number="7" hits="1" branch="True" condition-coverage="50% (2/4)">
+              <conditions>
+                <condition number="0" type="jump" coverage="50%" />
+                <condition number="1" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="11" hits="1" branch="False" />
+            <line number="12" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="0" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class line-rate="0.8055555555555556" branch-rate="0.6666666666666666" complexity="6" name="HotelBackend.Models.ModuloEstadias.Estadia" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Models\ModuloEstadias\ModeloEstadia.cs">
           <methods>
             <method line-rate="1" branch-rate="1" complexity="1" name=".ctor" signature="(int, System.DateTime, System.DateTime, System.Nullable&lt;System.DateTime&gt;, System.Nullable&lt;System.DateTime&gt;, string, System.Nullable&lt;int&gt;, System.Nullable&lt;System.Decimal&gt;)">
               <lines>
@@ -3579,37 +3551,32 @@
                 </line>
                 <line number="40" hits="1" branch="False" />
                 <line number="41" hits="1" branch="False" />
-                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
               </lines>
             </method>
-            <method line-rate="1" branch-rate="0.5" complexity="10" name="MarcarCheckOut" signature="(decimal)">
+            <method line-rate="0.6363636363636364" branch-rate="0.5" complexity="4" name="MarcarCheckOut" signature="(decimal)">
               <lines>
-                <line number="45" hits="1" branch="False" />
-                <line number="46" hits="1" branch="True" condition-coverage="50% (1/2)">
+                <line number="48" hits="1" branch="False" />
+                <line number="49" hits="1" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="0" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="47" hits="1" branch="True" condition-coverage="50% (1/2)">
-                  <conditions>
-                    <condition number="0" type="jump" coverage="50%" />
-                  </conditions>
-                </line>
-                <line number="49" hits="1" branch="False" />
-                <line number="50" hits="1" branch="False" />
-                <line number="52" hits="1" branch="False" />
+                <line number="50" hits="0" branch="False" />
+                <line number="51" hits="0" branch="False" />
                 <line number="53" hits="1" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="0" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="54" hits="1" branch="True" condition-coverage="50% (2/4)">
-                  <conditions>
-                    <condition number="0" type="jump" coverage="50%" />
-                    <condition number="1" type="jump" coverage="50%" />
-                  </conditions>
-                </line>
-                <line number="55" hits="1" branch="False" />
+                <line number="54" hits="0" branch="False" />
+                <line number="55" hits="0" branch="False" />
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
@@ -3640,33 +3607,28 @@
             </line>
             <line number="40" hits="1" branch="False" />
             <line number="41" hits="1" branch="False" />
-            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
             <line number="45" hits="1" branch="False" />
-            <line number="46" hits="1" branch="True" condition-coverage="50% (1/2)">
+            <line number="48" hits="1" branch="False" />
+            <line number="49" hits="1" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="0" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="47" hits="1" branch="True" condition-coverage="50% (1/2)">
-              <conditions>
-                <condition number="0" type="jump" coverage="50%" />
-              </conditions>
-            </line>
-            <line number="49" hits="1" branch="False" />
-            <line number="50" hits="1" branch="False" />
-            <line number="52" hits="1" branch="False" />
+            <line number="50" hits="0" branch="False" />
+            <line number="51" hits="0" branch="False" />
             <line number="53" hits="1" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="0" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="54" hits="1" branch="True" condition-coverage="50% (2/4)">
-              <conditions>
-                <condition number="0" type="jump" coverage="50%" />
-                <condition number="1" type="jump" coverage="50%" />
-              </conditions>
-            </line>
-            <line number="55" hits="1" branch="False" />
+            <line number="54" hits="0" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
           </lines>
         </class>
         <class line-rate="0" branch-rate="1" complexity="1" name="HotelBackend.Models.ModuloEstadias.EstadiaHabitacion" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Models\ModuloEstadias\ModeloEstadiaHabitacion.cs">
@@ -3697,22 +3659,22 @@
             <line number="18" hits="0" branch="False" />
           </lines>
         </class>
-        <class line-rate="1" branch-rate="1" complexity="1" name="HotelBackend.Controllers.ControladorEstadias" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Controlers\ControladorEstadias.cs">
+        <class line-rate="0" branch-rate="1" complexity="1" name="HotelBackend.Controllers.ControladorEstadias" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Controlers\ControladorEstadias.cs">
           <methods>
-            <method line-rate="1" branch-rate="1" complexity="1" name=".ctor" signature="(HotelBackend.Repository.RepositorioEstadia)">
+            <method line-rate="0" branch-rate="1" complexity="1" name=".ctor" signature="(HotelBackend.Repository.RepositorioEstadia)">
               <lines>
-                <line number="17" hits="1" branch="False" />
-                <line number="18" hits="1" branch="False" />
-                <line number="19" hits="1" branch="False" />
-                <line number="20" hits="1" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="17" hits="1" branch="False" />
-            <line number="18" hits="1" branch="False" />
-            <line number="19" hits="1" branch="False" />
-            <line number="20" hits="1" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
           </lines>
         </class>
         <class line-rate="0" branch-rate="1" complexity="1" name="HotelBackend.Controllers.HabitacionesController" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Controlers\ControladorHabitaciones.cs">
@@ -4331,16 +4293,16 @@
             <line number="63" hits="0" branch="False" />
           </lines>
         </class>
-        <class line-rate="1" branch-rate="1" complexity="1" name="HotelBackend.Controllers.ControladorEstadias.PeticionCrearEstadia" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Controlers\ControladorEstadias.cs">
+        <class line-rate="0" branch-rate="1" complexity="1" name="HotelBackend.Controllers.ControladorEstadias.PeticionCrearEstadia" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Controlers\ControladorEstadias.cs">
           <methods>
-            <method line-rate="1" branch-rate="1" complexity="1" name=".ctor" signature="(System.DateTime, System.DateTime, System.Collections.Generic.List&lt;int&gt;, System.Collections.Generic.List&lt;int&gt;, int)">
+            <method line-rate="0" branch-rate="1" complexity="1" name=".ctor" signature="(System.DateTime, System.DateTime, System.Collections.Generic.List&lt;int&gt;, System.Collections.Generic.List&lt;int&gt;, int)">
               <lines>
-                <line number="22" hits="1" branch="False" />
+                <line number="22" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="22" hits="1" branch="False" />
+            <line number="22" hits="0" branch="False" />
           </lines>
         </class>
         <class line-rate="0" branch-rate="1" complexity="1" name="HotelBackend.Controllers.ControladorEstadias.RespuestaCheckOut" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Controlers\ControladorEstadias.cs">
@@ -4355,18 +4317,18 @@
             <line number="23" hits="0" branch="False" />
           </lines>
         </class>
-        <class line-rate="0.3333333333333333" branch-rate="0.5" complexity="4" name="HotelBackend.Controllers.ControladorEstadias.&lt;CrearReserva&gt;d__5" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Controlers\ControladorEstadias.cs">
+        <class line-rate="0" branch-rate="0" complexity="4" name="HotelBackend.Controllers.ControladorEstadias.&lt;CrearReserva&gt;d__5" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Controlers\ControladorEstadias.cs">
           <methods>
-            <method line-rate="0.3333333333333333" branch-rate="0.5" complexity="4" name="MoveNext" signature="()">
+            <method line-rate="0" branch-rate="0" complexity="4" name="MoveNext" signature="()">
               <lines>
-                <line number="34" hits="1" branch="False" />
-                <line number="35" hits="1" branch="True" condition-coverage="50% (2/4)">
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="True" condition-coverage="0% (0/4)">
                   <conditions>
-                    <condition number="0" type="jump" coverage="50%" />
-                    <condition number="1" type="jump" coverage="50%" />
+                    <condition number="0" type="jump" coverage="0%" />
+                    <condition number="1" type="jump" coverage="0%" />
                   </conditions>
                 </line>
-                <line number="36" hits="1" branch="False" />
+                <line number="36" hits="0" branch="False" />
                 <line number="38" hits="0" branch="False" />
                 <line number="40" hits="0" branch="False" />
                 <line number="41" hits="0" branch="False" />
@@ -4375,19 +4337,19 @@
                 <line number="44" hits="0" branch="False" />
                 <line number="45" hits="0" branch="False" />
                 <line number="47" hits="0" branch="False" />
-                <line number="48" hits="1" branch="False" />
+                <line number="48" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="34" hits="1" branch="False" />
-            <line number="35" hits="1" branch="True" condition-coverage="50% (2/4)">
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="True" condition-coverage="0% (0/4)">
               <conditions>
-                <condition number="0" type="jump" coverage="50%" />
-                <condition number="1" type="jump" coverage="50%" />
+                <condition number="0" type="jump" coverage="0%" />
+                <condition number="1" type="jump" coverage="0%" />
               </conditions>
             </line>
-            <line number="36" hits="1" branch="False" />
+            <line number="36" hits="0" branch="False" />
             <line number="38" hits="0" branch="False" />
             <line number="40" hits="0" branch="False" />
             <line number="41" hits="0" branch="False" />
@@ -4396,7 +4358,7 @@
             <line number="44" hits="0" branch="False" />
             <line number="45" hits="0" branch="False" />
             <line number="47" hits="0" branch="False" />
-            <line number="48" hits="1" branch="False" />
+            <line number="48" hits="0" branch="False" />
           </lines>
         </class>
         <class line-rate="0" branch-rate="0" complexity="2" name="HotelBackend.Controllers.ControladorEstadias.&lt;MarcarCheckIn&gt;d__6" filename="C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Controlers\ControladorEstadias.cs">

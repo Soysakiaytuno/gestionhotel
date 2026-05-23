@@ -16,7 +16,7 @@ namespace HotelBackend.Repository
             _cadenaConexion = configuracion.GetConnectionString("DefaultConnection")!;
         }
 
-        public async Task<List<Huesped>> BuscarPorTerminoAsync(string termino)
+        public virtual async Task<List<Huesped>> BuscarPorTerminoAsync(string termino)
         {
             var huespedes = new List<Huesped>();
 

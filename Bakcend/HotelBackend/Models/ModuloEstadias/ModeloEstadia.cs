@@ -36,22 +36,29 @@ namespace HotelBackend.Models.ModuloEstadias
 
         public void MarcarCheckIn()
         {
-            if (Estado != "Programada") throw new Exception("Solo se puede hacer Check-In a una estadía programada.");
+            if (Estado != "Programada")
+            {
+                throw new Exception("Solo se puede hacer Check-In a una estadía programada.");   
+            }
             FechaCheckInReal = DateTime.Now;
             Estado = "En Curso";
         }
 
         public void MarcarCheckOut(decimal precioTotalPorNoche)
         {
-            if (Estado != "En Curso") throw new Exception("El huésped debe haber hecho Check-In primero.");
-            if (!FechaCheckInReal.HasValue) throw new Exception("No existe una fecha de Check-In válida.");
-
+            if (Estado != "En Curso")
+            {
+                throw new Exception("El huésped debe haber hecho Check-In primero.");
+            }
+            if (!FechaCheckInReal.HasValue)
+            {
+                throw new Exception("No existe una fecha de Check-In válida.");
+            }
+    
             FechaCheckOutReal = DateTime.Now;
             Estado = "Finalizada";
-
-            var diferencia = (FechaCheckOutReal.Value.Date - FechaCheckInReal.Value.Date).Days;
-            DiasCobrados = diferencia < 1 ? 1 : diferencia;
-            MontoTotal = DiasCobrados * precioTotalPorNoche;
+            MontoTotal = new Cobro().calcularCobro(this, precioTotalPorNoche);
         }
+
     }
 }

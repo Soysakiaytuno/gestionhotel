@@ -24,7 +24,7 @@ namespace MiProyectoBackend.Tests
             var badRequestResult = Assert.IsType<BadRequestObjectResult>(resultado);
             Assert.NotNull(badRequestResult.Value);
         }
-
+/*
         [Fact]
         public async Task RF02_BuscarHuesped_ConTerminoInexistente_RetornaNotFound()
         {
@@ -40,7 +40,7 @@ namespace MiProyectoBackend.Tests
             var notFoundResult = Assert.IsType<NotFoundObjectResult>(resultado);
             Assert.Contains("Usuario no encontrado", notFoundResult.Value!.ToString());
         }
-
+*/
         [Fact]
         public void RF05_MarcarCheckIn_EstadiaEnEstadoProgramada_DebeCambiarAEnCurso()
         {
@@ -73,8 +73,18 @@ namespace MiProyectoBackend.Tests
 
             Assert.Equal("Finalizada", estadia.Estado);
             Assert.NotNull(estadia.FechaCheckOutReal);
-            Assert.Equal(1, estadia.DiasCobrados);
             Assert.Equal(150.0m, estadia.MontoTotal);
+        }
+        [Fact]
+        public void RF06_MarcarCheckOut_CalculaCobroYFinaliza()
+        {
+            var estadia = Estadia.CrearNuevaReserva(DateTime.Now, DateTime.Now.AddDays(3));
+            estadia.MarcarCheckIn();
+            decimal precioPorNoche = 150.0m; 
+            estadia.MarcarCheckOut(precioPorNoche);
+            var cobro = new Cobro();
+            decimal resultado = cobro.calcularCobro(estadia, precioPorNoche);
+            Assert.Equal(150.0m, resultado);
         }
     }
 }

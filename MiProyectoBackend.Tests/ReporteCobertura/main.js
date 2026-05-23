@@ -290,14 +290,15 @@ var assemblies = [
   {
     "name": "HotelBackend",
     "classes": [
-      { "name": "HotelBackend.Controllers.ControladorEstadias", "rp": "HotelBackend_ControladorEstadias.html", "cl": 9, "ucl": 31, "cal": 40, "tl": 76, "cb": 2, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Controllers.ControladorEstadias.PeticionCrearEstadia", "rp": "HotelBackend_PeticionCrearEstadia.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 76, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Controllers.ControladorEstadias", "rp": "HotelBackend_ControladorEstadias.html", "cl": 0, "ucl": 40, "cal": 40, "tl": 76, "cb": 0, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Controllers.ControladorEstadias.PeticionCrearEstadia", "rp": "HotelBackend_PeticionCrearEstadia.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 76, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Controllers.ControladorEstadias.RespuestaCheckOut", "rp": "HotelBackend_RespuestaCheckOut.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 76, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Controllers.HabitacionesController", "rp": "HotelBackend_HabitacionesController.html", "cl": 0, "ucl": 19, "cal": 19, "tl": 43, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Controllers.HabitacionesController.RespuestaHabitacionDisponible", "rp": "HotelBackend_RespuestaHabitacionDisponible.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 43, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Controllers.HuespedesController", "rp": "HotelBackend_HuespedesController.html", "cl": 9, "ucl": 12, "cal": 21, "tl": 46, "cb": 1, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Controllers.HuespedesController.RespuestaBusquedaHuesped", "rp": "HotelBackend_RespuestaBusquedaHuesped.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 46, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.ModuloEstadias.Estadia", "rp": "HotelBackend_Estadia.html", "cl": 29, "ucl": 3, "cal": 32, "tl": 57, "cb": 7, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.ModuloEstadias.Cobro", "rp": "HotelBackend_Cobro.html", "cl": 7, "ucl": 2, "cal": 9, "tl": 17, "cb": 3, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.ModuloEstadias.Estadia", "rp": "HotelBackend_Estadia.html", "cl": 29, "ucl": 7, "cal": 36, "tl": 64, "cb": 4, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Models.ModuloEstadias.EstadiaHabitacion", "rp": "HotelBackend_EstadiaHabitacion.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 17, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Models.ModuloEstadias.EstadiaHuesped", "rp": "HotelBackend_EstadiaHuesped.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 20, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Models.ModuloHabitaciones.Habitacion", "rp": "HotelBackend_Habitacion.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -316,7 +317,7 @@ var assemblies = [
     "name": "MiProyectoBackend.Tests",
     "classes": [
       { "name": "Microsoft.AspNetCore.OpenApi.Generated", "rp": "MiProyectoBackend.Tests_Generated.html", "cl": 0, "ucl": 373, "cal": 373, "tl": 591, "cb": 0, "tb": 204, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "MiProyectoBackend.Tests.UserStoriesTests", "rp": "MiProyectoBackend.Tests_UserStoriesTests.html", "cl": 45, "ucl": 13, "cal": 58, "tl": 128, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "MiProyectoBackend.Tests.UserStoriesTests", "rp": "MiProyectoBackend.Tests_UserStoriesTests.html", "cl": 34, "ucl": 0, "cal": 34, "tl": 90, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "System.Runtime.CompilerServices", "rp": "MiProyectoBackend.Tests_CompilerServices.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
 ];
