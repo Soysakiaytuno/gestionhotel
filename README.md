@@ -51,7 +51,7 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
 
   - **CA2:** Dado que ubico una estadía en el listado, cuando esta se encuentra "Programada" o "En Curso", entonces el sistema me muestra los botones para accionar el Check-in o Check-out correspondientemente.
 
-
+.
 * **RF05:** Ejecución de Check-In: Como recepcionista, quiero marcar el check-in de una estadía programada, para confirmar la llegada de los huéspedes y el inicio real de la ocupación.
 
   - **CA1:** Dado que tengo una estadía en estado "Programada", cuando ejecuto la acción de Check-In, entonces el estado cambia a "En Curso" y el sistema registra automáticamente la fecha y hora actual como inicio real.
