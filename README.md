@@ -65,10 +65,12 @@ El sistema esta diseñado para un recepcionista de hotel, por ende solo se centr
 
   - **CA2:** Dado que confirmo el Check-Out, cuando el sistema guarda el registro, entonces calcula automáticamente la cantidad del cobro que se va a realizar
 
-# Diagrama De Base De datos
+# 3. Diagrama De Base De datos
 <img width="1353" height="706" alt="image" src="https://github.com/user-attachments/assets/417e23e3-144e-4db7-9427-908d7b350966" />
 
-# Diagrama de arquitectura
+# 4. Diagrama de arquitectura
 <img width="1920" height="1080" alt="Frontend Backend (3)" src="https://github.com/user-attachments/assets/0ecc34ef-2bc0-4d44-b9db-4a2fd0ef2ba4" />
 
+# 5. Video
+https://drive.google.com/file/d/1J4X4veZyHW_F2vtPD1ktnEMwdD_0hURu/view?usp=sharing
 
