@@ -1,3 +1,3 @@
 export const CONFIG = {
-    API_URL: "http://localhost:5091/api" 
+    API_URL: "https://gestionhotel-production.up.railway.app/api"
 };
