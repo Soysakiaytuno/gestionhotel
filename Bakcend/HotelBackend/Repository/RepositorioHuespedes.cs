@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
+using Npgsql;
 using Microsoft.Extensions.Configuration;
 using HotelBackend.Models.ModuloUsuarios;
 
@@ -24,20 +24,20 @@ namespace HotelBackend.Repository
                 SELECT h.id_huesped, u.id_usuario, u.documento_identidad, u.nombre, u.apellido, u.telefono
                 FROM Huesped h
                 INNER JOIN Usuario u ON h.id_usuario = u.id_usuario
-                WHERE u.documento_identidad LIKE '%' + @Termino + '%'
-                   OR u.nombre LIKE '%' + @Termino + '%'
-                   OR u.apellido LIKE '%' + @Termino + '%'
+                WHERE u.documento_identidad LIKE '%' || @Termino || '%'
+                   OR u.nombre LIKE '%' || @Termino || '%'
+                   OR u.apellido LIKE '%' || @Termino || '%'
             ";
 
-            using (SqlConnection conexion = new SqlConnection(_cadenaConexion))
+            using (NpgsqlConnection conexion = new NpgsqlConnection(_cadenaConexion))
             {
-                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                using (NpgsqlCommand comando = new NpgsqlCommand(sql, conexion))
                 {
                     comando.Parameters.AddWithValue("@Termino", termino);
 
                     await conexion.OpenAsync();
                     
-                    using (SqlDataReader lector = await comando.ExecuteReaderAsync())
+                    using (NpgsqlDataReader lector = await comando.ExecuteReaderAsync())
                     {
                         while (await lector.ReadAsync())
                         {

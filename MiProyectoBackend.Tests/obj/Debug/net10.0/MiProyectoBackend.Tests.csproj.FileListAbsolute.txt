@@ -148,3 +148,4 @@ C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiPro
 C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\obj\Debug\net10.0\ref\MiProyectoBackend.Tests.dll
 C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\bin\Debug\net10.0\Castle.Core.dll
 C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\bin\Debug\net10.0\Moq.dll
+C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\MiProyectoBackend.Tests\bin\Debug\net10.0\Npgsql.dll

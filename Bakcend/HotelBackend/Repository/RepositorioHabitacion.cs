@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
+using Npgsql;
 using Microsoft.Extensions.Configuration;
 using HotelBackend.Models.ModuloHabitaciones;
 
@@ -35,16 +35,16 @@ namespace HotelBackend.Repository
                       AND e.fecha_salida_programada > @FechaIngreso
                 )";
 
-            using (SqlConnection conexion = new SqlConnection(_cadenaConexion))
+            using (NpgsqlConnection conexion = new NpgsqlConnection(_cadenaConexion))
             {
-                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                using (NpgsqlCommand comando = new NpgsqlCommand(sql, conexion))
                 {
                     comando.Parameters.AddWithValue("@FechaIngreso", fechaIngreso);
                     comando.Parameters.AddWithValue("@FechaSalida", fechaSalida);
 
                     await conexion.OpenAsync();
                     
-                    using (SqlDataReader lector = await comando.ExecuteReaderAsync())
+                    using (NpgsqlDataReader lector = await comando.ExecuteReaderAsync())
                     {
                         // Leemos fila por fila y armamos el objeto
                         while (await lector.ReadAsync())
