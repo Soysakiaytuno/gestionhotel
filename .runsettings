@@ -6,17 +6,9 @@
         <Configuration>
           <Format>cobertura</Format>
 
-          <Include>
-            <ModuleItem>.*HotelBackend\.dll$</ModuleItem>
-          </Include>
-
-          <Exclude>
-            <ModulePath>.*\.Tests\.dll$</ModulePath>
-          </Exclude>
-
-          <!-- EXCLUIR ARCHIVOS BASURA QUE BAJAN EL PORCENTAJE -->
-          <ExcludeByFile>**/Program.cs</ExcludeByFile>
-          <ExcludeByFile>**/obj/**/*.cs</ExcludeByFile>
+          <Include>[HotelBackend]HotelBackend.Models*</Include>
+          <Exclude>[HotelBackend]HotelBackend.Controllers.*,[HotelBackend]HotelBackend.Repository.*</Exclude>
+          <ExcludeByFile>**/Program.cs,**/obj/**/*.cs,**/Controlers/**/*.cs,**/Repository/**/*.cs</ExcludeByFile>
 
         </Configuration>
       </DataCollector>
