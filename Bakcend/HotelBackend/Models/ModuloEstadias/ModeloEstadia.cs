@@ -48,7 +48,7 @@ namespace HotelBackend.Models.ModuloEstadias
         {
             if (Estado != EstadoProgramada)
             {
-                throw new Exception("Solo se puede hacer Check-In a una estadía programada.");   
+                throw new InvalidOperationException("Solo se puede hacer Check-In a una estadía programada.");   
             }
             FechaCheckInReal = DateTime.Now;
             Estado = EstadoEnCurso;
