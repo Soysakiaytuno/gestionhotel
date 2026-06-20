@@ -86,5 +86,13 @@ namespace MiProyectoBackend.Tests
             decimal resultado = cobro.calcularCobro(estadia, precioPorNoche);
             Assert.Equal(150.0m, resultado);
         }
+        [Fact]
+        public void RF03_CrearNuevaReserva_FechaSalidaMenorOIgualAFechaIngreso()
+        {
+            DateTime fechaIngreso = DateTime.Now.AddDays(10);
+            DateTime fechaSalida = DateTime.Now.AddDays(5); 
+            var resultado = Assert.Throws<ArgumentException>(() => Estadia.ValidarFechaEstadia(fechaIngreso, fechaSalida));
+            Assert.Contains("La fecha de salida no puede ser mayor a la de ingreso", resultado.Message);
+        }
     }
 }
