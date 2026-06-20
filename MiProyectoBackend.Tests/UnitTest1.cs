@@ -94,5 +94,18 @@ namespace MiProyectoBackend.Tests
             var resultado = Assert.Throws<ArgumentException>(() => Estadia.ValidarFechaEstadia(fechaIngreso, fechaSalida));
             Assert.Contains("La fecha de salida no puede ser mayor a la de ingreso", resultado.Message);
         }
+        [Fact]
+        public void RF06_MarcarCheckOut_EstadiaYaFinalizada()
+        {
+            var estadia = Estadia.CrearNuevaReserva(DateTime.Now, DateTime.Now.AddDays(2));
+            estadia.MarcarCheckIn();
+            estadia.MarcarCheckOut(100.0m);
+
+            var ex = Assert.Throws<InvalidOperationException>(() => 
+                estadia.MarcarCheckOut(100.0m)
+            );
+            Assert.Equal("La estadía ya ha sido finalizada.", ex.Message);
+        }
+
     }
 }
