@@ -32,6 +32,7 @@ namespace HotelBackend.Models.ModuloEstadias
         }
         public static Estadia CrearNuevaReserva(DateTime ingreso, DateTime salida)
         {
+            ValidarFechaEstadia(ingreso, salida);
             return new Estadia(0, ingreso, salida, null, null, "Programada", null, null);
         }
 
