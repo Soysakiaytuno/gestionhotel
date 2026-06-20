@@ -290,8 +290,8 @@ var assemblies = [
   {
     "name": "HotelBackend",
     "classes": [
-      { "name": "HotelBackend.Models.ModuloEstadias.Cobro", "rp": "HotelBackend_Cobro.html", "cl": 7, "ucl": 2, "cal": 9, "tl": 17, "cb": 3, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "HotelBackend.Models.ModuloEstadias.Estadia", "rp": "HotelBackend_Estadia.html", "cl": 36, "ucl": 7, "cal": 43, "tl": 64, "cb": 4, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.ModuloEstadias.Cobro", "rp": "HotelBackend_Cobro.html", "cl": 14, "ucl": 4, "cal": 18, "tl": 29, "cb": 7, "tb": 12, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "HotelBackend.Models.ModuloEstadias.Estadia", "rp": "HotelBackend_Estadia.html", "cl": 51, "ucl": 4, "cal": 55, "tl": 78, "cb": 8, "tb": 10, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Models.ModuloEstadias.EstadiaHabitacion", "rp": "HotelBackend_EstadiaHabitacion.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 17, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Models.ModuloEstadias.EstadiaHuesped", "rp": "HotelBackend_EstadiaHuesped.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 20, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "HotelBackend.Models.ModuloHabitaciones.Habitacion", "rp": "HotelBackend_Habitacion.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },

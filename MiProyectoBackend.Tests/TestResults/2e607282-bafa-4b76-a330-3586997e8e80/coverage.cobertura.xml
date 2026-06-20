@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.65" branch-rate="0.6818000000000001" version="1.9" timestamp="1781957898" lines-covered="65" lines-valid="100" branches-covered="15" branches-valid="22">
+<coverage line-rate="0.65" branch-rate="0.6818000000000001" version="1.9" timestamp="1781959216" lines-covered="65" lines-valid="100" branches-covered="15" branches-valid="22">
   <sources>
     <source>C:\Users\Mijael Ander\Documents\tallersoftware\gestionestadia\gestionhotel\Bakcend\HotelBackend\Models\</source>
   </sources>
