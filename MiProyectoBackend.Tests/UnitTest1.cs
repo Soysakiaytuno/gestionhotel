@@ -106,6 +106,27 @@ namespace MiProyectoBackend.Tests
             );
             Assert.Equal("La estadía ya ha sido finalizada.", ex.Message);
         }
+        [Fact]
+        public void RF06_CalcularCobro_FechaCheckOutAnteriorACheckIn()
+        {
+            var estadia = Estadia.CrearNuevaReserva(DateTime.Now, DateTime.Now.AddDays(2));
+            var estadiaInconsistente = Estadia.CargarDesdeBd(
+                1, 
+                DateTime.Now, 
+                DateTime.Now.AddDays(2), 
+                DateTime.Now.AddDays(1),
+                DateTime.Now,
+                "En Curso",
+                null,
+                null
+            );
+            
+            var calculadorCobro = new Cobro();
 
+            var ex = Assert.Throws<ArgumentException>(() => 
+                calculadorCobro.calcularCobro(estadiaInconsistente, 100.0m)
+            );
+            Assert.Contains("La fecha de Check-Out real no puede ser anterior a la de Check-In real", ex.Message);
+        }
     }
 }
