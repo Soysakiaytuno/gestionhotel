@@ -50,8 +50,7 @@ namespace HotelBackend.Models.ModuloEstadias
             FechaCheckInReal = DateTime.Now;
             Estado = "En Curso";
         }
-
-        public void MarcarCheckOut(decimal precioTotalPorNoche)
+        private void Validaciones()
         {
             if (Estado == "Finalizada")
             {
@@ -65,7 +64,11 @@ namespace HotelBackend.Models.ModuloEstadias
             {
                 throw new Exception("No existe una fecha de Check-In válida.");
             }
-    
+        }
+
+        public void MarcarCheckOut(decimal precioTotalPorNoche)
+        {
+            Validaciones();
             FechaCheckOutReal = DateTime.Now;
             Estado = "Finalizada";
             MontoTotal = new Cobro().calcularCobro(this, precioTotalPorNoche);
