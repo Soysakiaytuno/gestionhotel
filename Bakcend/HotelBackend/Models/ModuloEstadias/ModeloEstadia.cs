@@ -23,7 +23,13 @@ namespace HotelBackend.Models.ModuloEstadias
             DiasCobrados = dias; 
             MontoTotal = monto;
         }
-
+        public static void ValidarFechaEstadia(DateTime ingreso, DateTime salida)
+        {
+            if (salida <= ingreso)
+            {
+                throw new ArgumentException("La fecha de salida no puede ser mayor a la de ingreso");
+            }
+        }
         public static Estadia CrearNuevaReserva(DateTime ingreso, DateTime salida)
         {
             return new Estadia(0, ingreso, salida, null, null, "Programada", null, null);
