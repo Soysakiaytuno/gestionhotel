@@ -53,6 +53,10 @@ namespace HotelBackend.Models.ModuloEstadias
 
         public void MarcarCheckOut(decimal precioTotalPorNoche)
         {
+            if (Estado == "Finalizada")
+            {
+                throw new InvalidOperationException("La estadía ya ha sido finalizada.");
+            }
             if (Estado != "En Curso")
             {
                 throw new Exception("El huésped debe haber hecho Check-In primero.");
