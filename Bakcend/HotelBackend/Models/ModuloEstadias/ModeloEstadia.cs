@@ -12,6 +12,9 @@ namespace HotelBackend.Models.ModuloEstadias
         public string Estado { get; private set; } = null!;
         public int? DiasCobrados { get; private set; }
         public decimal? MontoTotal { get; private set; }
+        public const string EstadoProgramada = "Programada";
+        public const string EstadoEnCurso = "En Curso";
+        public const string EstadoFinalizada = "Finalizada";
         private Estadia(int id, DateTime ing, DateTime sal, DateTime? inReal, DateTime? outReal, string est, int? dias, decimal? monto)
         {
             IdEstadia = id; 
@@ -33,7 +36,7 @@ namespace HotelBackend.Models.ModuloEstadias
         public static Estadia CrearNuevaReserva(DateTime ingreso, DateTime salida)
         {
             ValidarFechaEstadia(ingreso, salida);
-            return new Estadia(0, ingreso, salida, null, null, "Programada", null, null);
+            return new Estadia(0, ingreso, salida, null, null, EstadoProgramada, null, null);
         }
 
         public static Estadia CargarDesdeBd(int id, DateTime ing, DateTime sal, DateTime? inReal, DateTime? outReal, string est, int? dias, decimal? monto)
@@ -43,20 +46,20 @@ namespace HotelBackend.Models.ModuloEstadias
 
         public void MarcarCheckIn()
         {
-            if (Estado != "Programada")
+            if (Estado != EstadoProgramada)
             {
                 throw new Exception("Solo se puede hacer Check-In a una estadía programada.");   
             }
             FechaCheckInReal = DateTime.Now;
-            Estado = "En Curso";
+            Estado = EstadoEnCurso;
         }
         private void Validaciones()
         {
-            if (Estado == "Finalizada")
+            if (Estado == EstadoFinalizada)
             {
                 throw new InvalidOperationException("La estadía ya ha sido finalizada.");
             }
-            if (Estado != "En Curso")
+            if (Estado != EstadoEnCurso)
             {
                 throw new Exception("El huésped debe haber hecho Check-In primero.");
             }
@@ -70,7 +73,7 @@ namespace HotelBackend.Models.ModuloEstadias
         {
             Validaciones();
             FechaCheckOutReal = DateTime.Now;
-            Estado = "Finalizada";
+            Estado = EstadoFinalizada;
             MontoTotal = new Cobro().calcularCobro(this, precioTotalPorNoche);
         }
 
